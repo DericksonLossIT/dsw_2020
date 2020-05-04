@@ -29,16 +29,14 @@ function validarQtd(){
 }
 
 function validarDataValidade(){
-    var dataUser = new Date(document.forms["formCadastroProduto"]["txtDtValidade"].value).valueOf();
+    var dataUser = new Date(document.forms["formCadastroProduto"]["txtDtValidade"].value).getTime();
     var dataValidar = new Date.now();
     
-    alert(dataUser);
-    alert(dataValidar);
-
     
-
-    
-
+    if(dataUser - dataValidar < 86400 * 7){
+        alert("Data de validade tem menos de uma semana!");
+        return false;
+    }
 }
 
 function validarCategoria(){
