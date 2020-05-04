@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Derickson Loss de Melo">
+    <link rel="stylsheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="validation.js"></script>
+    <title>Cadastro de produtos</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="formCadastroProduto">
+            <h1>Cadastro de produtos</h1>
+            <form name="formCadastroProduto" action="salvar.php" method="POST">
+                <div class="input-fields">
+                    <!--<label for="txtNomeProduto">Nome do produto: </label>-->
+                    <input type="text" id="fNomeProduto" name="txtNomeProduto" placeholder="Placa mãe">
+        
+                    <br>
+        
+                    <!--<label for="txtPreco">Preço: R$</label>-->
+                    <input type="text" id="fPreco" name="txtPreco" placeholder="50,00" required>
+        
+                    <br>
+        
+                    <!--<label for="txtQtd">Quantidade: </label>-->
+                    <input type="text" name="txtQtd" id="fQtd" placeholder="50" required>
+        
+                    <br>
+        
+                    <!--<label for="txtDtValidade">Data de validade: </label>-->
+                    <input type="date" name="txtDtValidade" id="fDtValidade" required> 
+        
+                    <br>
+        
+                    <!--<label for="imgFoto">Foto do produto: </label>-->
+                    <input type="file" name="imgFoto" id="fFoto">
+        
+                    <br>
+        
+                    <!--<label for="txtCategoria">Categoria: </label>-->
+                    <select name="txtCategoria" id="fCategoria" required>
+                        <option value="selecione">Selecione...</option>
+                        <option value="categoria1">Categoria 1</option>
+                        <option value="categoria2">Categoria 2</option>
+                    </select>
+        
+                    <br>
+        
+                    <input type="submit" value="Salvar" onclick="return validarFormulario()">
+                    <input type="reset" value="Limpar">
+        
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
