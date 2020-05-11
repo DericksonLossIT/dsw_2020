@@ -1,0 +1,8 @@
+CREATE DATABASE db_carros;
+
+CREATE TABLE carro (
+    codigo INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+    modelo VARCHAR(50) NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    tipo VARCHAR(50) NOT NULL
+);
